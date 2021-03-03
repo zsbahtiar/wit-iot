@@ -12,6 +12,7 @@ const app = express();
 const cors = require('cors')
 
 app.use(cors())
+app.options('*', cors());
 app.use(bp.json())
 app.get('/', async (req,res) => {
     res.send('This app is running properly')

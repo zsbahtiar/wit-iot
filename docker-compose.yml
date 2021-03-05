@@ -9,9 +9,11 @@ services:
       - 9001:9001
     volumes:
       - ./conf/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    restart: always
   mongodb:
     image: mongo:latest
     hostname: mongo
     container_name: mongo-iot
+    restart: always
     ports:
       - 27017:27017
